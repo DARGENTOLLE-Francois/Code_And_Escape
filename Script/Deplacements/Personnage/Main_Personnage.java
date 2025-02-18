@@ -5,6 +5,7 @@ public class Main_Personnage {
 	private String nom;
 	private int xPerso;
     private int yPerso;
+    private String[] inventaire;
     
 	public Main_Personnage() {
 		super();
@@ -94,9 +95,18 @@ public class Main_Personnage {
 	            default:
 	                 
 	                System.out.println("Ceci n'est pas une direction valide. Ré-essaye encore !!");
-	        }
-
 	 }
+	        
+    
+	public String[] Recup_Dans_Inventaire(String objet) {
+		this.inventaire[0] = objet;
+	}
+	
+	public String Enlever_de_Inventaire(String[] objet){
+		this.inventaire.remove(inventaire[0]);
+		return inventaire[0];
+	}
+  }
 
 
 }
